@@ -16,7 +16,7 @@ body {
   background: url("../images/cusat_logo.png") no-repeat;
   width: 150px;
   height: 150px;
-  margin: 10px 15px 10px 0;
+  margin: 10px 15px 15px 0;
 }
 
 .navbar-brand {
@@ -87,7 +87,38 @@ body {
   clear: both;
   margin-top: -30px;
 }
+
+.row-tab{
+  display:block;
+  padding-top:20px;
+}
 /* END HEADER */
+#homepage-notification{
+  background-color:aqua;
+  widows: 16px;
+  height: max-content;
+  margin:0 auto; 
+}
+
+.row-tab{
+  display:block;
+  padding-top:20px;
+}
+
+.notification-heading{
+  display:inline-block;
+  width:40%;
+  text-align:right;
+}
+
+/* ABOUT PANEL */
+#about {
+  text-align: left;
+  background: rgb(156, 114, 94);
+  display: grid;
+  grid-template-columns: 1fr;
+  justify-items: center;
+}
 
 /* FOOTER */
 .panel-footer {
