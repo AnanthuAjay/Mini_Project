@@ -88,27 +88,27 @@ body {
   margin-top: -30px;
 }
 
-.row-tab{
-  display:block;
-  padding-top:20px;
+.row-tab {
+  display: block;
+  padding-top: 20px;
 }
 /* END HEADER */
-#homepage-notification{
-  background-color:aqua;
+#homepage-notification {
+  background-color: aqua;
   widows: 16px;
   height: max-content;
-  margin:0 auto; 
+  margin: 0 auto;
 }
 
-.row-tab{
-  display:block;
-  padding-top:20px;
+.row-tab {
+  display: block;
+  padding-top: 20px;
 }
 
-.notification-heading{
-  display:inline-block;
-  width:40%;
-  text-align:right;
+.notification-heading {
+  display: inline-block;
+  width: 40%;
+  text-align: right;
 }
 
 /* ABOUT PANEL */
@@ -271,6 +271,67 @@ h3.menu-item-title {
   font-size: 0.9em;
   font-style: italic;
 }
+
+.noti-box {
+  width: 500px;
+  padding: 30px;
+  background: white;
+  color: black;
+  right: 4%;
+  top: 35%;
+  height: 1000px;
+  overflow: scroll;
+  position: absolute;
+  margin-top: 50px;
+  border-radius: 30px;
+  display: block;
+  box-shadow: 10px 10px 8px 10px rgba(0, 0, 0, 0.5);
+}
+
+.noti-box::-webkit-scrollbar {
+  display: none;
+}
+
+.event-panel {
+  padding: 10px;
+  margin-bottom: 30px;
+  position: relative;
+  border-radius: 20px;
+  box-shadow: 10px 10px 8px 10px rgba(0, 0, 0, 0.5);
+}
+
+.event-panel h1 {
+  font-family: Arial, Helvetica, sans-serif;
+  font-weight: bold;
+}
+
+.event-panel h5 {
+  font-family: cursive;
+  font-size: 2em;
+}
+
+.noti-button {
+  position: relative;
+  color: #951c49;
+  border: #000;
+}
+
+.badge {
+  border: solid 2px red;
+  border-radius: 50%;
+  background-color: red;
+  position: absolute;
+  top: -5px;
+  right: -5px;
+}
+.delete-panel {
+  font-size: 3em;
+  border: solid red;
+  margin-right: auto;
+  height: 100px;
+  width: 100px;
+}
+
 /* END SINGLE CATEGORY PAGE */
 
 /********** Large devices only **********/
