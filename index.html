@@ -74,78 +74,27 @@
                   Contact Us</a
                 >
               </li>
-              <li>
-                <div class="noti-button">
-                  <svg width="2em" height="2em" viewBox="0 0 16 16" class="bell" fill="currentColor"
-                    xmlns="http://www.w3.org/2000/svg">
-                    <path d="M8 16a2 2 0 0 0 2-2H6a2 2 0 0 0 2 2z" />
-                    <path fill-rule="evenodd"
-                      d="M8 1.918l-.797.161A4.002 4.002 0 0 0 4 6c0 .628-.134 2.197-.459 3.742-.16.767-.376 1.566-.663 2.258h10.244c-.287-.692-.502-1.49-.663-2.258C12.134 8.197 12 6.628 12 6a4.002 4.002 0 0 0-3.203-3.92L8 1.917zM14.22 12c.223.447.481.801.78 1H1c.299-.199.557-.553.78-1C2.68 10.2 3 6.88 3 6c0-2.42 1.72-4.44 4.005-4.901a1 1 0 1 1 1.99 0A5.002 5.002 0 0 1 13 6c0 .88.32 4.2 1.22 6z" />
-                  </svg>
-                  <span class="badge"></span>
-                </div>
-              </li>
             </ul>
             <!-- #nav-list -->
           </div>
           <!-- .collapse .navbar-collapse -->
         </div>
-        </div>
-        <div class="noti-box">
-          <div class="event-panel">
-            <h1>THIS IS THE HEADING</h1>
-            <h5>this is the description</h5>
-          </div>
-        
-          <div class="event-panel">
-            <h1>THIS IS THE HEADING</h1>
-            <h5>
-              this is the de Lorem ipsum dolor sit, amet consectetur adipisicing
-              elit. Fuga animi rerum voluptas quidem officia voluptate explicabo
-              optio quas quibusdam corrupti sequi voluptatum, repellendus a
-              natus soluta repudiandae aliquid ad. Consequatur! scription
-            </h5>
-            <span class="delete-panel">X</span>
-          </div>
-        
-          <div class="event-panel">
-            <h1>THIS IS THE HEADING</h1>
-            <h5>
-              this is the de Lorem ipsum dolor sit, amet consectetur adipisicing
-              elit. Fuga animi rerum voluptas quidem officia voluptate explicabo
-              optio quas quibusdam corrupti sequi voluptatum, repellendus a
-              natus soluta repudiandae aliquid ad. Consequatur! scription
-            </h5>
-            <span class="delete-panel">X</span>
-          </div>
-          <div class="event-panel">
-            <h1>THIS IS THE HEADING</h1>
-            <h5>
-              this is the description Lorem ipsum, dolor sit amet consectetur
-              adipisicing elit. Sunt impedit quis assumenda illum animi, velit
-              autem delectus ipsa iusto ratione inventore libero quidem quasi?
-              Excepturi ad sed rem autem natus?
-            </h5>
-            <span class="delete-panel">X</span>
-          </div>
-        
-          <div class="event-panel">
-            <h1>THIS IS THE HEADING</h1>
-            <h5>
-              this Lorem ipsum dolor sit amet consectetur adipisicing elit.
-              Beatae numquam hic debitis in labore officia illo. A libero,
-              facilis repellendus, similique illo, ipsam vitae odio dolorum
-              mollitia consequuntur inventore dignissimos. is the description
-            </h5>
-            <span class="delete-panel">X</span>
-          </div>
         <!-- .container -->
       </nav>
       <!-- #header-nav -->
     </header>
 
     <div id="main-content" class="container">
-      
+      <div class="jumbotron">
+        <section id="homepage-notification">
+          <div class="row-tab">
+            <div class="notification-heading">          
+              <h1>Events happening:</h1>
+            </div>
+  
+          </div>
+        </section>
+      </div>
     </div>
 
     <section id="about" class="abt">
@@ -164,7 +113,7 @@
       <div class="container">
         <div class="row">
           <section id="hours" class="col-sm-4">
-            <span>Memebers : </span><br /><br />
+            <span>Members : </span><br /><br />
             ANANTHU AJAY<br />
             JOEL JOSE<br />
             ARUN AK<br />
@@ -172,8 +121,19 @@
             SANEEN K P<br />
             <hr class="visible-xs" />
           </section>
+
+          <section id="maps" class="col-sm-4">
+            <div class="col-md-4 col-sm-12 col-xs-12">
+              <a href="https://www.google.com/maps/place/School+of+Engineering,+CUSAT/@10.0482921,76.3314729,15z/data=!4m5!3m4!1s0x0:0xe9d0d17ee3a87389!8m2!3d10.0482921!4d76.3314729" target="_blank">
+                <div id="map-tile">
+                  <iframe src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d15714.47467138405!2d76.3314729!3d10.0482921!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0xe9d0d17ee3a87389!2sSchool%20of%20Engineering%2C%20CUSAT!5e0!3m2!1sen!2sin!4v1607423725837!5m2!1sen!2sin" width="400" height="300" frameborder="0" style="border:0;" allowfullscreen="" aria-hidden="false" tabindex="0"></iframe>
+                  <span>map</span>
+                </div>
+              </a>
+            </div>
+          </section>
         </div>
-      </div>
+      </div>  
     </footer>
 
     <!-- jQuery (Bootstrap JS plugins depend on it) -->
@@ -181,6 +141,5 @@
     <script src="js/bootstrap.min.js"></script>
     <script src="js/ajax-utils.js"></script>
     <script src="js/script.js"></script>
-    <script src="notification.js"></script>
   </body>
 </html>
