@@ -111,13 +111,18 @@ body {
   position: absolute;
   top: 9vh;
   left: 63vw;
-  display: none;
+  display: block;
 }
 
 .login-options div {
   background-color: transparent;
   padding: 20px;
   border-radius: 20px;
+}
+
+.login-options svg {
+  width: 30px;
+  height: 30px;
 }
 
 .login-options button {
