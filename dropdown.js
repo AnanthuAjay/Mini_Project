@@ -39,7 +39,9 @@ admin_login.addEventListener("click", () => {
   window.location.href = "login.html";
 });
 
-org_login.addEventListener("click", () => {});
+org_login.addEventListener("click", () => {
+  window.location.href = "OrgRegistration.html";
+});
 login.addEventListener("click", () => {
   console.log(drop_down);
   if (drop_down_status) {
