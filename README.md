@@ -7,7 +7,7 @@ These events are a healthy part of a students academic life as it gains
 experience in many areas outside the institutional curriculum.
 As the current advertisement of these events are through social medias
 And whatsapp groups , it fails to reach the eyes of many eligible
-students across the .
+students across the university.
 This could be an actual loss of opportunity for eligible students who
 are interested in its participation.
 
