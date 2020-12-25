@@ -1,22 +1,101 @@
 <!DOCTYPE html>
 <html>
   <head>
-    <title>ORGANISATION REGISTRATION</title>
+    <title>ORGANIZER</title>
     <link rel="stylesheet" type="text/css" href="OrgRegistration.css" />
   </head>
   <body>
-    <h1>ORGANISATION REGISTRATION</h1>
-    <form>
-      <label for="name">HEAD NAME</label>
-      <input type="text" name="name" placeholder="head name" /><br />
-      <label for="name">CONTACT DETAILS</label>
-      <input type="text" name="name" placeholder="contact details" /><br />
-      <label for="email">EMAIL</label>
-      <input type="email" name="email" placeholder="xyz123@gmail.com" /><br />
-      <label for="password">PASSWORD</label>
-      <input type="password" name="password" placeholder="password" /><br />
-      <label for="confirm">CONFIRM PASSWORD</label>
-      <input type="" name="confirm" />
+    <h1>ORGANIZER</h1>
+    <form id="organizer-form">
+      <div class="row-tab">
+        <div class="label-name">
+        <label id="name">Name:</label>
+        </div>
+        <div class="input-name">
+        <input type="text" placeholder=" Enter your Name">
+        </div>
+      </div>
+      <div class="row-tab">
+        <div class="label-name">
+        <label id="name">Description:</label>
+        </div>
+        <div class="input-name">
+        <textarea>Enter your Event Description here</textarea>
+        </div>
+      </div>
+      <div class="row-tab">
+        <div class="label-name">
+        <label id="name">Fees:</label>
+        </div>
+        <div class="input-name">
+        <input type="number" placeholder=" Enter fees for the event">
+        </div>
+      </div>
+      <div class="row-tab">
+        <div class="label-name">
+        <label id="name">Hosting Capcity:</label>
+        </div>
+        <div class="input-name">
+        <input type="number" placeholder=" Enter Hosting capacity of the Event">
+        </div>
+      </div>
+      <div class="row-tab">
+        <div class="label-name">
+        <label id="name">Venue:</label>
+        </div>
+        <div class="input-name">
+        <input type="text" placeholder=" Enter Venue of the Event">
+        </div>
+      </div>
+      <div class="row-tab">
+        <div class="label-name">
+        <label id="name">Timing:</label>
+        </div>
+      </div>
+      <div class="row-tab">
+        <div class="label-name">
+          <label id="name">From:</label>
+          </div>
+        <div class="input-name">
+        <input type="time" placeholder=" Enter starting time">
+        </div>
+      </div>
+      <div class="row-tab">
+        <div class="label-name">
+          <label id="name">To:</label>
+          </div>
+        <div class="input-name">
+        <input type="time" placeholder=" Enter ending time">
+        </div>
+      </div>
+      <div class="row-tab">
+        <div class="label-name">
+        <label id="name">Date:</label>
+        </div>
+        <div class="input-name">
+        <input type="date" placeholder=" Enter date of the Event">
+        </div>
+      </div>
+      <div class="row-tab">
+        <div class="label-name">
+        <label id="name">Contact number:</label>
+        </div>
+        <div class="input-name">
+        <input type="numer" placeholder=" Enter your contact number">
+        </div>
+      </div>
+      <div class="row-tab">
+        <div class="label-name">
+        <label id="email">Email:</label>
+        </div>
+        <div class="input-name">
+        <input type="email" placeholder=" Email">
+        </div>
+         
+      
+        <div class="row-tab">
+        <button id="submit" style="padding:10px">Submit</button>
+          </div>
     </form>
   </body>
 </html>
