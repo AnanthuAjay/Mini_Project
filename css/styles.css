@@ -7,6 +7,10 @@ body {
   font-family: "Oxygen", sans-serif;
 }
 
+body .panel-footer{
+  background-color: #222;
+}
+
 /** HEADER **/
 #header-nav {
   background-color: #f6b319;
