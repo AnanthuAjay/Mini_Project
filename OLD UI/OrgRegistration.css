@@ -1,0 +1,40 @@
+body {
+  background: url(bg.jpg) no-repeat;
+  background-size: cover;
+  text-align:left;
+}
+h1 {
+  text-align: center;
+  font-size: 50px;
+  color: steelblue;
+}
+form {
+  text-align: center;
+  margin: 20px auto;
+  width: 320px;
+  color: steelblue;
+}
+input {
+  padding: 10px;
+  font-size: inherit;
+}
+
+#organizer-form{
+  width:800px;
+  margin:0 auto; 
+}
+
+.row-tab{
+  display:block;
+  padding-top:20px;
+}
+.label-name{
+  display:inline-block;
+  width:40%;
+  text-align:left;
+}
+.input-name{
+ display:inline-block;
+  text-align:left;
+  width:48%;
+}
