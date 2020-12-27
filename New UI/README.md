@@ -1,0 +1,2 @@
+# CUSATBUZZ
+eventmanager for cusat
