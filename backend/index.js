@@ -17,8 +17,10 @@ app.use(express.json());
 const Port = process.env.Port || 4001;
 
 app.post("/home/events", (req, res) => {
-  console.log(databaseUpload(getInsertingQuery(req.body)));
-  res.send();
+  console.log(req.body);
+  databaseUpload(getInsertingQuery(req.body));
+
+  res.send("SUCCESSFULL UPADTED DATABASE");
 });
 
 app.get("/home", (req, res) => {
@@ -35,7 +37,6 @@ let databaseUpload = query => {
     }
 
     console.log("Successfull uploaded to database");
-    client.end();
   });
 };
 
@@ -71,7 +72,7 @@ let getInsertingQuery = values => {
 };
 
 let getSelectQuery = () => {
-  var query = "SELECT * FROM organize WHERE name = 'saneen'";
+  var query = "SELECT * FROM organize";
   return query;
 };
 

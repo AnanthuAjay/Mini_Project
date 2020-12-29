@@ -17,13 +17,17 @@ form.addEventListener("submit", () => {
   inputs.forEach(input => {
     formValue[input.name] = input.value;
   });
-});
 
-const body = {
-  method: "POST",
-  headers: myHeaders,
-  mode: "cors",
-  body: JSON.stringify(formValue)
-};
-const request = new Request(url + "/events", body);
-fetch(request);
+  const body = {
+    method: "POST",
+    headers: myHeaders,
+    mode: "cors",
+    body: JSON.stringify(formValue)
+  };
+  const request = new Request(url + "/events", body);
+  fetch(request)
+    .then(response => response.text())
+    .then(text => {
+      window.alert(text);
+    });
+});
