@@ -9,11 +9,17 @@ fetch(url)
   .then(response => response.json())
   .then(data => console.log(data));
 
+var venue_input = document.getElementById("venue");
+var description_input = document.getElementById("description");
+
 var formValue = {};
 var form = document.getElementById("organizer-form");
 var inputs = form.querySelectorAll("input");
 
 form.addEventListener("submit", () => {
+  venue_input.value = document.getElementById("venues").value;
+  description_input.value = document.getElementById("descriptions").value;
+
   inputs.forEach(input => {
     formValue[input.name] = input.value;
   });

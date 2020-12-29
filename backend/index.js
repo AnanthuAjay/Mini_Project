@@ -18,9 +18,16 @@ const Port = process.env.Port || 4001;
 
 app.post("/home/events", (req, res) => {
   console.log(req.body);
-  databaseUpload(getInsertingQuery(req.body));
-
-  res.send("SUCCESSFULL UPADTED DATABASE");
+  checkEventStatus(
+    req.body.venue,
+    req.body.time_from,
+    req.body.date,
+    status => {
+      console.log(status);
+    }
+  );
+  //daaseUpload(getInsertingQuery(req.body));
+  //res.send("SUCCESSFULL UPADTED DATABASE");
 });
 
 app.get("/home", (req, res) => {
@@ -37,6 +44,25 @@ let databaseUpload = query => {
     }
 
     console.log("Successfull uploaded to database");
+  });
+};
+
+let checkEventStatus = (venue, time, date, callback) => {
+  var status = true;
+
+  databaseRetrieve(getSelectQuery(), data => {
+    data.forEach(element => {
+      if (
+        element.venue === venue &&
+        element.time_from === time &&
+        element.date === date
+      ) {
+        status = false;
+        return;
+      }
+
+      return callback(status);
+    });
   });
 };
 
