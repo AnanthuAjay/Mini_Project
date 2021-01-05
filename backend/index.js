@@ -17,17 +17,20 @@ app.use(express.json());
 const Port = process.env.Port || 4001;
 
 app.post("/home/events", (req, res) => {
-  console.log(req.body);
   checkEventStatus(
     req.body.venue,
     req.body.time_from,
     req.body.date,
     status => {
       console.log(status);
+      if (status) {
+        databaseUpload(getInsertingQuery(req.body));
+        res.send("Event Succesfully Registered");
+      } else {
+        res.send("Event cannot be registered due to clash !!");
+      }
     }
   );
-  //daaseUpload(getInsertingQuery(req.body));
-  //res.send("SUCCESSFULL UPADTED DATABASE");
 });
 
 app.get("/home", (req, res) => {
@@ -50,6 +53,7 @@ let databaseUpload = query => {
 let checkEventStatus = (venue, time, date, callback) => {
   var status = true;
 
+  console.log(venue, time, date);
   databaseRetrieve(getSelectQuery(), data => {
     data.forEach(element => {
       if (
@@ -60,9 +64,8 @@ let checkEventStatus = (venue, time, date, callback) => {
         status = false;
         return;
       }
-
-      return callback(status);
     });
+    return callback(status);
   });
 };
 
