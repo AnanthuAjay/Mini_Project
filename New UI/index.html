@@ -417,7 +417,7 @@
                                <th>Register</th>
                              </tr>
                            </thead>
-                           <tbody id="events-table-body" style="border: solid 20px red;">
+                           <tbody id="events-table-body">
                            </tbody>
                          </table>
                     </div>
@@ -426,21 +426,21 @@
           </div>
      </section>
 
-     <div id="modalOne" class="modal">
+     <div id="modalOne" class="modal" >
           <div class="modal-content">
             <div class="contact-form">
               <a class="close">&times;</a>
-              <form action="/">
+              <form>
                 <h2>Student Registration</h2>
                 <div>
                   <input class="fname" type="text" name="name" placeholder="Full name">
-                  <input type="text" name="name" placeholder="Email">
-                  <input type="text" name="name" placeholder="number">
-                  <input type="text" name="name" placeholder="semester">
+                  <input type="text" name="email" placeholder="Email">
+                  <input type="text" name="number" placeholder="number">
+                  <input type="text" name="semester" placeholder="semester">
                   <div class="input-name">
 
-                    <input type="text" id="venue" name="venue" style="display: none">
-                    <select name="cars" id="venues" style="width: 75%;">
+                    <input type="text" id="modal-venue" name="venue" style="display: none">
+                    <select name="cars" id="modal-venues" style="width: 75%;">
 
                          <option value="Department of Physics">Department of Physics</option>
                          <option value="Department of Applied Chemistry">Department of Applied Chemistry</option>
@@ -600,7 +600,7 @@
                     <script src="js/smoothscroll.js"></script>
                     <script src="js/custom.js"></script>                  
 </body>
-<script src="ajax.js" > 
+<script src="ajax.js"> 
 </script>
-<script src="events.js" type="module"></script>
+<script src="studentRegistration.js"></script>
 </html>
