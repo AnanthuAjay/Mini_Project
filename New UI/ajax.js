@@ -8,6 +8,7 @@ myHeaders.append("Access-Control-Allow-Origin", url + "/events");
 fetch(url)
   .then(response => response.json())
   .then(data => {
+    console.log(data);
     DisplayEvents(data);
   });
 

@@ -3,6 +3,11 @@ const app = express(); // initializes the express variable
 const cors = require("cors"); // imports the cors module to get rid of cross-origin error
 const { Client } = require("pg"); //  imports the pg module for postgres database manipulation
 
+var createEventTable =
+  "CREATE TABLE IF NOT EXISTS Organize(event_id INTEGER GENERATED ALWAYS AS IDENTITY,name VARCHAR(200) NOT NULL,heading VARCHAR(500) NOT NULL,description VARCHAR(2000) NOT NULL,fees INTEGER,capacity INTEGER,venue VARCHAR(2000) NOT NULL , time_from VARCHAR(50)  NOT NULL,time_till VARCHAR(50),date VARCHAR(50),contact INTEGER NOT NULL,email VARCHAR(200) NOT NULL,PRIMARY KEY(event_id));";
+var createRegisterTable =
+  "CREATE TABLE IF NOT EXISTS Registrations (studentID INTEGER GENERATED ALWAYS AS IDENTITY,eventID INTEGER NOT NULL,name VARCHAR(200) NOT NULL,email VARCHAR(200) NOT NULL,number INTEGER NOT NULL,semester INTEGER NOT NULL,PRIMARY KEY(studentID));";
+
 const client = new Client({
   // client variable with initialized database constrains
   user: "postgres",
@@ -17,9 +22,16 @@ app.use(cors());
 app.use(express.json());
 const Port = process.env.Port || 4001;
 
+app.post("/home/upload", (req, res) => {
+  if (req.files) {
+    console.log(req.files);
+  }
+});
+
 //server call to conduct POST request at home/events
 // used to register an event
 app.post("/home/events", (req, res) => {
+  CreateTable(createEventTable);
   checkEventStatus(
     req.body.venue,
     req.body.time_from,
@@ -35,10 +47,21 @@ app.post("/home/events", (req, res) => {
   );
 });
 
+//fucntion to create a table
+var CreateTable = query => {
+  client.query(query, (err, res) => {
+    if (err) {
+      console.log(err);
+      return;
+    }
+    console.log(res);
+  });
+};
+
 //Server call to conduct POST request at home/registration
 //used for registering a student for an event
 app.post("/home/Registration", (req, res) => {
-  console.log(req.body);
+  CreateTable(createRegisterTable);
   databaseUpload(getInsertingQuery(req.body, "registrations"));
   res.send("Regsiterd");
 });
@@ -46,6 +69,7 @@ app.post("/home/Registration", (req, res) => {
 //Server call to conduct GET reuques from home page..
 //used for geting all the events registerd in the database and update in the homepage
 app.get("/home", (req, res) => {
+  console.log("home called");
   databaseRetrieve(getSelectQuery(), data => {
     res.send(data);
   });
@@ -123,7 +147,7 @@ let getInsertingQuery = (values, tablename) => {
 };
 
 let getSelectQuery = () => {
-  var query = "SELECT venue , tim_from , date FROM organize";
+  var query = "SELECT * FROM organize";
   return query;
 };
 

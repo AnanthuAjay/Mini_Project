@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <title>Document</title>
+  </head>
+  <body>
+    <form action="/home/upload" method="POST" enctype="multipart/form-data">
+      <input type="file" name="eventImage" value="image" />
+      <input type="submit" />
+    </form>
+  </body>
+  <script>
+    /*var url = "http://127.0.0.1:4001/home";
+    const myHeaders = new Headers();
+    myHeaders.append("Content-Type", "application/json");
+    myHeaders.append("Accept", "application/json");
+
+    myHeaders.append("Access-Control-Allow-Origin", url + "/upload");
+
+    const body = {
+      method: "POST",
+      headers: myHeaders,
+      mode: "cors",
+      body: JSON.stringify(formValue)
+    };
+    const request = new Request(url + "/", body);
+    fetch(request)
+      .then(response => response.text())
+      .then(text => {
+        window.alert(text);
+      });*/
+  </script>
+</html>

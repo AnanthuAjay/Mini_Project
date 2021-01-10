@@ -7,6 +7,7 @@ let DisplayEvents = data => {
       event.event_id +
       '" class="apply-button">Apply</button>';
     let tds = document.createElement("td");
+    console.log(event.heading);
     tds.textContent = event.heading;
 
     eventsTable.appendChild(tr);
@@ -17,7 +18,7 @@ let DisplayEvents = data => {
 };
 
 const modal = document.getElementById("modalOne");
-var EventID = 0;
+var eventID = 0;
 eventsTable.addEventListener("click", e => {
   if ((e.target.className = "apply-button")) {
     modal.style.display = "block";
@@ -25,7 +26,7 @@ eventsTable.addEventListener("click", e => {
   }
 });
 
-var RegistrationFormData = [];
+var RegistrationFormData = {};
 var RegistrationForm = modal.querySelector("form");
 var RegistrationFormInputs = RegistrationForm.querySelectorAll("input");
 
@@ -35,9 +36,21 @@ RegistrationForm.addEventListener("submit", () => {
   document.getElementById("modal-venue").value = document.getElementById(
     "modal-venues"
   ).value;
-  RegistrationFormData["EventID"] = EventID;
+  RegistrationFormData["eventID"] = EventID;
   RegistrationFormInputs.forEach(input => {
     RegistrationFormData[input.name] = input.value;
   });
-  console.log(RegistrationFormData);
+
+  const body2 = {
+    method: "POST",
+    headers: myHeaders,
+    mode: "cors",
+    body: JSON.stringify(RegistrationFormData)
+  };
+
+  const request2 = new Request(url + "/Registration", body2);
+
+  fetch(request2)
+    .then(response => response.text())
+    .then(data => {});
 });
