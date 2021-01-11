@@ -25,7 +25,7 @@ let getInsertingQuery = (values, tablename) => {
 var createEventTable =
   "CREATE TABLE IF NOT EXISTS event(event_id INTEGER,imagePath VARCHAR(2000),name VARCHAR(200) NOT NULL,heading VARCHAR(500) NOT NULL,description VARCHAR(2000) NOT NULL,fees INTEGER,capacity INTEGER,venue VARCHAR(2000),time_from VARCHAR(50)  NOT NULL,time_till VARCHAR(50),date VARCHAR(50),contact BIGINT NOT NULL,email VARCHAR(200) NOT NULL,PRIMARY KEY(event_id));";
 var createRegisterTable =
-  "CREATE TABLE IF NOT EXISTS registrations (studentID INTEGER GENERATED ALWAYS AS IDENTITY,event_id INTEGER NOT NULL,name VARCHAR(200) NOT NULL,email VARCHAR(200) NOT NULL,number INTEGER NOT NULL,semester INTEGER NOT NULL, department VARCHAR(200) NOT NULL ,PRIMARY KEY(studentID));";
+  "CREATE TABLE IF NOT EXISTS registrations (studentID INTEGER GENERATED ALWAYS AS IDENTITY,event_id INTEGER NOT NULL,name VARCHAR(200) NOT NULL,email VARCHAR(200) NOT NULL,number BIGINT NOT NULL,semester INTEGER NOT NULL, department VARCHAR(200) NOT NULL ,PRIMARY KEY(studentID));";
 
 module.exports = {
   getSelectQuery,

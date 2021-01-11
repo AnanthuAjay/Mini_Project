@@ -29,6 +29,7 @@ var databaseUpload = query => {
     console.log("Successfull uploaded to database");
   });
 };
+
 //function to retrieve data from the database and return it through callback using a query
 var databaseRetrieve = (query, callback) => {
   client.query(query, (err, res) => {
