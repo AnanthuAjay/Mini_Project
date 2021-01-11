@@ -116,8 +116,8 @@ register.addEventListener("click", () => {
   const request2 = new Request(url + "/Registration", body2);
 
   fetch(request2)
-    .then(response => response.text())
+    .then(response => response.json())
     .then(data => {
-      window.alert(data);
+      window.alert(data.response);
     });
 });

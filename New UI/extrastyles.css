@@ -10,7 +10,7 @@
   width: fit-content;
   display: grid;
   grid-template-rows: auto auto auto auto auto;
-  grid-template-columns: 27vw;
+  grid-template-columns: 20vw;
   padding: 20px;
   box-shadow: 0 3rem 6rem rgba(0, 0, 0, 0.2);
   height: fit-content;
