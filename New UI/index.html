@@ -11,6 +11,7 @@
      <meta name="author" content="">
      <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
 
+
      <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
      <link rel="stylesheet" href="css/bootstrap.min.css">
      <link rel="stylesheet" href="css/font-awesome.min.css">
@@ -88,13 +89,10 @@
      <!-- PRE LOADER -->
      <section class="preloader">
           <div class="spinner">
-
                <span class="spinner-rotate"></span>
-               
           </div>
-     </section>
-
-
+     </section>     
+           
      <!-- MENU -->
      <section class="navbar custom-navbar navbar-fixed-top" role="navigation">
           <div class="container">
@@ -379,11 +377,16 @@
                                   </div>
                                   </div>
                                 </div>
+                                <label>choose an image to upload</label></br>
                                 <br>
-                                  <div class="row-tab">
-                                  <input type="submit" value="Submit">
-                                  </div>
                               </form>
+              <form action="http://127.0.0.1:4001/home/upload" method="POST" id="image-form" enctype="multipart/form-data">
+                    <input type="file" id="eventImage" name="eventImage">
+
+              <form>
+                                  <div class="row-tab">
+                                  <input id="event-submit" type="submit" value="Submit">
+                                  </div>
                               </div>
                           
                     </div>
@@ -433,6 +436,7 @@
           <div class="modal-content">
             <div class="contact-form">
               <a class="close">&times;</a>
+              <form action=""></form>
               <form>
                 <h2>Student Registration</h2>
                 <div>
@@ -442,7 +446,7 @@
                   <input type="text" name="semester" placeholder="semester">
                   <div class="input-name">
 
-                    <input type="text" id="modal-venue" name="venue" style="display: none">
+                    <input type="text" id="modal-venue" name="Department" style="display: none">
                     <select name="cars" id="modal-venues" style="width: 75%;">
 
                          <option value="Department of Physics">Department of Physics</option>
@@ -473,7 +477,7 @@
                    </div>
                   
                 </div>
-                <button type="submit" href="/">Submit</button>
+                <button id="register" type="submit" >Submit</button>
               </form>
             </div>
           </div>

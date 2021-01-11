@@ -40,17 +40,4 @@ RegistrationForm.addEventListener("submit", () => {
   RegistrationFormInputs.forEach(input => {
     RegistrationFormData[input.name] = input.value;
   });
-
-  const body2 = {
-    method: "POST",
-    headers: myHeaders,
-    mode: "cors",
-    body: JSON.stringify(RegistrationFormData)
-  };
-
-  const request2 = new Request(url + "/Registration", body2);
-
-  fetch(request2)
-    .then(response => response.text())
-    .then(data => {});
 });
